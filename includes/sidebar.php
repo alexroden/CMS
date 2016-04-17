@@ -22,16 +22,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <?php
-                            
-                                    $query = "SELECT * FROM categories LIMIT 4";
-                                    $select_cat_sidebar = mysqli_query($db, $query);
-                                    while($row = mysqli_fetch_assoc($select_cat_sidebar)) {
-                                        $cat_title = $row['cat_title'];
-                                        echo "<li><a href=''>{$cat_title}</a></li>";
-                                    }
-                            
-                                ?>
+                                <?php cat_side_loop(); ?>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
